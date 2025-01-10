@@ -13,11 +13,11 @@ def lambda_handler(event, context):
             "first_name": "Hain-Lee",
             "last_name": "Hseuh",
             "location": "California",
-            "start_date": ""
+            "start_date": "2000-01-01"
         },
     ]
 
-    engineer = next((eng for eng in engineers if eng['id'] == engineer_id), None)
+    engineer = next((eng for eng in engineers if eng['_id'] == engineer_id), None)
 
     if engineer:
         return {
