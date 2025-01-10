@@ -9,7 +9,7 @@ def lambda_handler(event, context):
         {
             "_id": "0",
             "first_name": "Hain-Lee",
-            "last_name": "Hseuh",
+            "last_name": "Hsueh",
             "location": "California",
         },
         {
