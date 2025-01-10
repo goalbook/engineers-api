@@ -1,6 +1,4 @@
 import json
-from urllib.parse import urlparse, unquote
-
 
 def lambda_handler(event, context):
     path = event['rawPath']  # '/engineers/1'
@@ -9,11 +7,58 @@ def lambda_handler(event, context):
 
     engineers = [
         {
-            "_id": "1",
+            "_id": "0",
             "first_name": "Hain-Lee",
             "last_name": "Hseuh",
             "location": "California",
-            "start_date": "2000-01-01"
+        },
+        {
+            "_id": "1",
+            "first_name": "Malek",
+            "last_name": "Ascha",
+            "location": "Arizona",
+        },
+        {
+            "_id": "2",
+            "first_name": "Joy",
+            "last_name": "Maloney",
+            "location": "Massachusetts",
+        },
+        {
+            "_id": "3",
+            "first_name": "Sam",
+            "last_name": "Pool",
+            "location": "Colorado",
+        },
+        {
+            "_id": "4",
+            "first_name": "Eli",
+            "last_name": "Zoller",
+            "location": "South Carolina",
+        },
+        {
+            "_id": "5",
+            "first_name": "Keziyah",
+            "last_name": "Lewis",
+            "location": "Florida",
+        },
+        {
+            "_id": "6",
+            "first_name": "Suzanne",
+            "last_name": "Li",
+            "location": "New York",
+        },
+        {
+            "_id": "7",
+            "first_name": "Suzanne",
+            "last_name": "Li",
+            "location": "New York",
+        },
+        {
+            "_id": "8",
+            "first_name": "Ogochukwu",
+            "last_name": "Ozotto",
+            "location": "Texas",
         },
     ]
 
@@ -27,5 +72,5 @@ def lambda_handler(event, context):
     else:
         return {
             "statusCode": 404,
-            "body": json.dumps({"error": f"No engineer found with id {engineer_id}"})
+            "body": json.dumps({"error": f"No engineer found with id '{engineer_id}'"})
         }
