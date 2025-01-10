@@ -21,7 +21,5 @@ GET /engineer/:id
   last_name: string
   // the location the engineer is based out of
   location: string
-  // The date the engineer started working for Goalbook (MM/DD/YYYY)
-  start_date: string
 }
 ```
